@@ -1,0 +1,17 @@
+contar=0
+vendedor=(input("¿Quieres comenzar a ver el sueldo del vendedor? (si/no): "))
+while vendedor.lower()== "si":
+  contar+=1
+  print(contar)
+  ventas=int(input("¿Cuantas ventas hizo?: "))
+  nombre=(input("¿Cual es el nombre del vendedor?: "))
+  salariob=int(input("¿Cual es el salario base?: "))
+  if ventas<3500:
+    comision=0.07
+  elif 3500<=ventas<=7000:
+    comision=0.10
+  elif ventas>7000:
+    comision=0.15
+  Sueldot= salariob+(salariob*comision)
+  print("El vendedor",nombre,"ha ganado",Sueldot)
+  vendedor=(input("¿Hay otro vendedor? (si/no): "))
